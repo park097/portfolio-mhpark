@@ -1,3 +1,4 @@
+package com.minhee.portfolio.presentation.dto
 import com.minhee.portfolio.domain.entity.Link
 
 data class LinkDTO(

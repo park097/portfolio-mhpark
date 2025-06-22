@@ -1,6 +1,9 @@
+package com.minhee.portfolio.presentation.dto
 import com.minhee.portfolio.domain.entity.Achievement
 import com.minhee.portfolio.domain.entity.Experience
 import com.minhee.portfolio.domain.entity.Skill
+import com.minhee.portfolio.presentation.dto.AchievementDTO
+import com.minhee.portfolio.presentation.dto.ExperienceDTO
 import java.time.format.DateTimeFormatter
 
 class ResumeDTO(

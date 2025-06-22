@@ -1,5 +1,7 @@
+package com.minhee.portfolio.presentation.controller
 import com.minhee.portfolio.domain.constant.SkillType
 import com.minhee.portfolio.presentation.service.PresentationService
+
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping

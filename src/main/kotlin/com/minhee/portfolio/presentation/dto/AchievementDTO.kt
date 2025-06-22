@@ -1,3 +1,4 @@
+package com.minhee.portfolio.presentation.dto
 data class AchievementDTO(
     val title: String,
     val description: String,
