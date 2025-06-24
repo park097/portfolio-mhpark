@@ -18,6 +18,8 @@ import com.minhee.portfolio.domain.repository.IntroductionRepository
 import com.minhee.portfolio.domain.repository.LinkRepository
 import com.minhee.portfolio.domain.repository.ProjectRepository
 import com.minhee.portfolio.domain.repository.SkillRepository
+import com.minhee.portfolio.domain.entity.Account
+import com.minhee.portfolio.domain.repository.AccountRepository
 import jakarta.annotation.PostConstruct
 import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Profile
@@ -33,6 +35,7 @@ class DataInitializer(
     private val linkRepository: LinkRepository,
     private val projectRepository: ProjectRepository,
     private val skillRepository: SkillRepository,
+    private val accountRepository: AccountRepository
 
 ) {
 
@@ -170,6 +173,12 @@ class DataInitializer(
             )
         )
         projectRepository.saveAll(mutableListOf(project1, project2))
+
+        val account = Account(
+            loginId = "admin1",
+            pw = "\$2a\$10\$BWi6SLqZRJyVvJyufjTtHeYXNNhpNY9rxaVl9fBOE.1t3QF98B.cO"
+        )
+        accountRepository.save(account)
 
     }
 }
