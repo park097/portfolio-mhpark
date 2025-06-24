@@ -8,6 +8,7 @@ import com.minhee.portfolio.domain.entity.ProjectDetail
 import com.minhee.portfolio.domain.repository.ProjectRepository
 import jakarta.transaction.Transactional
 import org.springframework.stereotype.Service
+import kotlin.text.get
 
 @Service
 class AdminProjectService(
@@ -29,6 +30,20 @@ class AdminProjectService(
 
         return TableDTO.from(classInfo, entities)
     }
+
+    @Transactional
+    fun save(form: ProjectForm) {
+
+        val projectDetails = form.details
+            ?.map { detail -> detail.toEntity() }
+            ?.toMutableList()
+
+        val project = form.toEntity()
+        project.addDetails(projectDetails)
+
+        projectRepository.save(project)
+    }
+
     @Transactional
     fun update(id: Long, form: ProjectForm) {
 

@@ -1,8 +1,8 @@
-package com.yongback.portfolio.admin.context.dashboard.service
+package com.minhee.portfolio.admin.context.dashboard.service
 
-import com.yongback.portfolio.admin.data.TableDTO
-import com.yongback.portfolio.domain.entity.HttpInterface
-import com.yongback.portfolio.domain.repository.HttpInterfaceRepository
+import com.minhee.portfolio.admin.data.TableDTO
+import com.minhee.portfolio.domain.entity.HttpInterface
+import com.minhee.portfolio.domain.repository.HttpInterfaceRepository
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Sort
 import org.springframework.stereotype.Service

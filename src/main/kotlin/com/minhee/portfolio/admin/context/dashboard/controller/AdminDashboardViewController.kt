@@ -1,7 +1,7 @@
-package com.yongback.portfolio.admin.context.dashboard.controller
+package com.minhee.portfolio.admin.context.dashboard.controller
 
-import com.yongback.portfolio.admin.context.dashboard.data.VisitorsDTO
-import com.yongback.portfolio.admin.context.dashboard.service.AdminDashboardService
+import com.minhee.portfolio.admin.context.dashboard.data.VisitorsDTO
+import com.minhee.portfolio.admin.context.dashboard.service.AdminDashboardService
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
