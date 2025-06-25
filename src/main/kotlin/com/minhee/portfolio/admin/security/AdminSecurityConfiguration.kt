@@ -14,8 +14,14 @@ class AdminSecurityConfiguration {
 
     @Bean
     fun passwordEncoder(): PasswordEncoder {
-        return BCryptPasswordEncoder()
+        return object : PasswordEncoder {
+            override fun encode(rawPassword: CharSequence): String = rawPassword.toString()
+            override fun matches(rawPassword: CharSequence, encodedPassword: String): Boolean {
+                return rawPassword.toString() == encodedPassword
+            }
+        }
     }
+
 
     @Bean
     fun filterChain(httpSecurity: HttpSecurity): SecurityFilterChain {
