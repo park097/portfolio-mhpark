@@ -11580,20 +11580,26 @@ html {
 
 .profile {
   position: relative;
-  height: 75vw;
   width: 75vw;
-  border-radius: 5vw;
-  margin-top: 5vw;
-  max-height: 40rem;
   max-width: 40rem;
+  height: 35vw;
+  max-height: 40rem;
+  margin-top: 5vw;
+  border-radius: 5vw;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  overflow: visible; /* 중요: 이미지가 넘칠 수 있도록 */
 }
-.profile .profile-img {
-  height: 80vw;
-  max-height: 45rem;
+
+.profile-img {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0%;
+  left: 53%;
+  transform: translateX(-49%);
+  width: 30.78vw;
+  /* max-width: 38rem; */
+  height: auto;
+  z-index: 10;
+  border-radius: 2rem;
 }
 .profile .dots-1 {
   position: absolute;
@@ -11713,7 +11719,7 @@ html {
     width: 35vw;
   }
   .profile .profile-img {
-    height: 40vw;
+    height:  36vw;
   }
   .profile .dots-1 {
     width: 1.5vw;
